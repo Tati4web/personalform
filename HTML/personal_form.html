@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact form for Tatiana Rivera</title>
+    <link href="../css/form.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <section>
+            <h1>Contact form for Tatiana Rivera</h1>
+            <p class="p">Please fill in each space requested in the form to meet your request!</p>
+
+            <form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">
+                <input type="hidden" name="send_to" value="rptatiana@gmail.com">
+
+                <fieldset>
+                    <legend>Your contact information</legend>
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                    <label for="lastname">Your last name</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Your last name/surname">
+                    <label for="phone">Your phone number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Please enter your area code!">
+                    <label for="email">Your personal Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                    <label for="date">If you would like to know more about my company, make an appointment!</label>
+                    <input type="date" id="date" name="date">
+                </fieldset>
+                <fieldset>
+                    <legend>About your request</legend>
+                    <p>What kind of information would you like to get?</p>
+
+                    <label> <input type="radio" name="info" value="services">About our IT proffesional services</label>
+                    <label><input type="radio" name="info" value="price">About price of every IT service</label>
+                    <label><input type="radio" name="info" value="places"> Your areas of expertise</label>
+
+                    <label for="contact">Who would you like to contact?</label>
+                    <select id="contact" name="contact">
+                        <option selected>Select one...</option>
+                        <option value="direct">I would like to contact directly with Tatiana Rivera</option>
+                        <option value="development">I would like to contact with the Development team</option>
+                        <option value="marketing">I would like to contact with Marketing team</option>
+                        <option value="other">Other...</option>
+                    </select>
+
+                    <label for="comments">Special request</label>
+                    <textarea id="comments" name="comments" placeholder="Write here your specific questions"></textarea>
+
+                    <label>
+                        <input type="checkbox" name="subscribe" value="subscribe" checked>Add me to your email list!
+                    </label>
+                </fieldset>
+
+                <button type="submit">Send information</button>
+
+            </form>
+        </section>
+        <aside>
+            <h4>Our location</h4>
+            <address>
+                D-Evolution &middot;
+                Blv del Hipodromo&middot;
+                #672, San Benito&middot;
+                San Salvador.
+            </address>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7752.852623769223!2d-89.24589463593594!3d13.69261074655028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330258c95e0cb%3A0x7a104c6d37aec464!2sColonia%20San%20Benito%2C%20San%20Salvador!5e0!3m2!1ses!2ssv!4v1692939390322!5m2!1ses!2ssv" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </aside>
+    </div>
+</body>
+
+</html>
